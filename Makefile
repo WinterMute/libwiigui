@@ -127,23 +127,23 @@ $(OFILES_SOURCES): $(HFILES)
 # This rule links in binary data with .ttf, .png, and .mp3 extensions
 #---------------------------------------------------------------------------------
 %.ttf.o %_ttf.h : %.ttf
-	@echo $(notdir $<)
+	$(SILENTMSG) $(notdir $<)
 	$(bin2o)
 
 %.lang.o %_lang.h : %.lang
-	@echo $(notdir $<)
+	$(SILENTMSG) $(notdir $<)
 	$(bin2o)
 
 %.png.o %_png.h : %.png
-	@echo $(notdir $<)
+	$(SILENTMSG) $(notdir $<)
 	$(bin2o)
 
 %.ogg.o %_ogg.h : %.ogg
-	@echo $(notdir $<)
+	$(SILENTMSG) $(notdir $<)
 	$(bin2o)
 
 %.pcm.o %_pcm.h : %.pcm
-	@echo $(notdir $<)
+	$(SILENTMSG) $(notdir $<)
 	$(bin2o)
 
 -include $(DEPENDS)
