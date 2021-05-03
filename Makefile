@@ -26,7 +26,7 @@ INCLUDES	:=	source
 #---------------------------------------------------------------------------------
 
 CFLAGS		=	-g -O2 -Wall $(MACHDEP) $(INCLUDE) `freetype-config --cflags`
-CXXFLAGS	=	$(CFLAGS)
+CXXFLAGS	=	$(CFLAGS) -std=gnu++14
 LDFLAGS		=	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map
 
 #---------------------------------------------------------------------------------
